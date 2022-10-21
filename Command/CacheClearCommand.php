@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace KPhoen\RulerZBundle\Command;
 
-use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -13,7 +13,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  *
  * @author Kévin Gomez <contact@kevingomez.fr>
  */
-class CacheClearCommand extends ContainerAwareCommand
+class CacheClearCommand extends Command
 {
     /**
      * {@inheritdoc}
@@ -22,8 +22,7 @@ class CacheClearCommand extends ContainerAwareCommand
     {
         $this
             ->setName('rulerz:cache:clear')
-            ->setDescription("Clear RulerZ's cache")
-        ;
+            ->setDescription("Clear RulerZ's cache");
     }
 
     /**
